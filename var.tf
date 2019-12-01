@@ -1,15 +1,3 @@
-variable "aws_access_key" {
-  description = "AWS access key"
-}
-
-variable "aws_secret_key" {
-  description = "AWS secret key"
-}
-
-variable "key_name" {
-  description = "SSH key name to access the EC2 instances"
-}
-
 variable "vpc_cidr_block" {
   description = "VPC network"
   default     = "10.1.0.0/16"
@@ -33,18 +21,6 @@ variable "region" {
 variable "availability_zones" {
   description = "Availability Zones"
   default     = "us-east-1a,us-east-1b,us-east-1c"
-}
-
-variable "ami" {
-  description = "EC2 Instances AMIs"
-  default = {
-    us-east-1      = "ami-c7a451a7"
-  }
-}
-
-variable "instance_type" {
-  description = "EC2 instance type"
-  default = "t2.micro"
 }
 
 variable "db_instance_type" {
